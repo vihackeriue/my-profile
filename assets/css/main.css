@@ -33,6 +33,11 @@ ul {
 
   opacity: 1;
 }
+
+.hidden {
+  display: none !important;
+}
+
 .main-content {
   padding-left: 270px;
 }
@@ -45,6 +50,31 @@ ul {
   width: 100%;
   margin: auto;
 }
+.section .container {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+}
+.section-title h2::before {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color: var(--skin-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +97,30 @@ ul {
 .btn:hover {
   transform: scale(1.05);
 }
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
 
+.card {
+  background-color: var(--bg-black-100);
+  padding: 12px 15px;
+  border: 1px solid var(--bg-black-50);
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+.card .card-title {
+  margin: 12px 0 15px 0;
+  border-bottom: 2px solid var(--bg-black-50);
+}
+.card .card-title h3 {
+  color: var(--skin-color);
+}
+.card .card-title p {
+  color: var(--text-black-700);
+  margin-bottom: 12px;
+}
 /* aside */
 .aside {
   width: 270px;
@@ -244,3 +297,121 @@ h3.my-profession {
   transform: scale(1.05);
   z-index: 10;
 }
+
+/* about */
+.about .about-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about-content .about-text {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about-content .about-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--text-black-900);
+}
+.about .about-content .about-text h3 span {
+  color: var(--skin-color);
+}
+.about .about-content .about-text p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+.about .about-content .personal-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  margin-top: 40px;
+}
+
+.about .about-content .personal-info .info-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.about .about-content .personal-info .info-item p {
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+.about .about-content .personal-info .info-item p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.about .about-content .personal-info .buttons {
+  margin-top: 30px;
+}
+.about .about-content .personal-info .buttons btn {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+.about .about-content .skills {
+  flex: 0 0 40%;
+  max-width: 40%;
+  margin-top: 40px;
+}
+.about .about-content .skills .skill-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about-content .skills .skill-item h5 {
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.about .about-content .skills .skill-item .progress {
+  background-color: var(--bg-black-50);
+  height: 7px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.about .about-content .education,
+.about .about-content .experience {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+}
+.about .about-content h3.title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--text-black-900);
+}
+.about .about-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+/* eduction and experience */
+
+.about .about-content .card {
+  flex: 0 0 90%;
+  max-width: 90%;
+  margin-bottom: 24px;
+}
+
+.about .about-content .card .card-title i {
+  margin-right: 8px;
+}
+.about .about-content .card .card-content p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.about .about-content .card .card-content p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+}
+
+/* 1:22:33 */
