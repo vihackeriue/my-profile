@@ -6,12 +6,13 @@
     <title>Profile</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/color-1.css" />
+    <link rel="stylesheet" href="assets/css/style-switcher.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="dark">
     <!-- ===== Main Container Start =====-->
     <div class="main-container">
       <!-- ===== Aside Start =====-->
@@ -24,19 +25,19 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i> Home </a>
+            <a href="#home" class="active"><i class="fa fa-home"></i> Home </a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i> About </a>
+            <a href="#about"><i class="fa fa-user"></i> About </a>
+          </li>
+          <!-- <li>
+            <a href="#service"><i class="fa fa-list"></i> Services</a>
+          </li> -->
+          <li>
+            <a href="#my-project"><i class="fa fa-briefcase"></i> My Project</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-list"></i> Services</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-briefcase"></i> Portfolio</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-comments"></i> Contact</a>
+            <a href="#more"><i class="fa fa-comments"></i> More</a>
           </li>
         </ul>
       </div>
@@ -45,7 +46,7 @@
       <!-- ===== Main Content Start=====-->
       <div class="main-content">
         <!-- ===== Home Section Start=====-->
-        <section class="home section">
+        <section class="home active section" id="home">
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
@@ -60,11 +61,8 @@
                   am proficient in Java, Spring Framework and database. Have
                   experience in building API and processing data effectively.
                 </p>
-                <a
-                  href="https://drive.google.com/file/d/1W5MsQDclDh9XPUUZTmR5nu10yOYtKin4/view?usp=drive_link"
-                  class="btn hire-me"
-                  target="_blank"
-                  >My Resume</a
+                <a href="#about" class="btn about-me" data-section-index="1"
+                  >About Me</a
                 >
               </div>
               <div class="home-img padd-15">
@@ -80,7 +78,7 @@
         <!-- ===== Home Section End=====-->
 
         <!-- ===== About Container Start =====-->
-        <section class="about section">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -105,7 +103,7 @@
                   <div class="personal-info padd-15">
                     <div class="row">
                       <div class="info-item padd-15">
-                        <p>Birthday: <span>02/01/2003</span></p>
+                        <p>Full Name: <span>Nguyen Van Vi</span></p>
                       </div>
                       <div class="info-item padd-15">
                         <p>Birthday: <span>02/01/2003</span></p>
@@ -122,34 +120,48 @@
                     </div>
                     <div class="row">
                       <div class="buttons padd-15">
-                        <a href="#" class="btn">Follow Me</a>
-                        <a href="#" class="btn"> Contact</a>
+                        <a
+                          href="https://drive.google.com/file/d/1W5MsQDclDh9XPUUZTmR5nu10yOYtKin4/view?usp=drive_link"
+                          class="btn"
+                          target="_blank"
+                          >My Resume</a
+                        >
                       </div>
                     </div>
                   </div>
                   <div class="skills padd-15">
+                    <h3>Skill:</h3>
                     <div class="row">
                       <div class="skill-item padd-15">
-                        <h5>CSS</h5>
-                        <div class="progress">
-                          <div class="progress-item" style="width: 76%"></div>
-                          <div class="skill-percent">76%</div>
+                        <div class="card">
+                          <div class="card-content">
+                            <p>
+                              Front-end: <span>HTML, CSS, JS, ReactJS</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
 
                       <div class="skill-item padd-15">
-                        <h5>JS</h5>
-                        <div class="progress">
-                          <div class="progress-item" style="width: 76%"></div>
-                          <div class="skill-percent">76%</div>
+                        <div class="card">
+                          <div class="card-content">
+                            <p>Back-end: <span>Java,</span></p>
+                          </div>
                         </div>
                       </div>
 
                       <div class="skill-item padd-15">
-                        <h5>Java</h5>
-                        <div class="progress">
-                          <div class="progress-item" style="width: 76%"></div>
-                          <div class="skill-percent">76%</div>
+                        <div class="card">
+                          <div class="card-content">
+                            <p>Database: <span>SQL Server, MySQL</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <div class="card">
+                          <div class="card-content">
+                            <p>Version Control: <span>Git</span></p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -183,29 +195,6 @@
                         </div>
                       </div>
                       <!--  -->
-                      <div class="card padd-15">
-                        <div class="card-title">
-                          <i class="fa fa-calendar"></i> 2021-2026
-                          <h3>
-                            Vietnam - Korea University of Information and
-                            Communication Technology
-                          </h3>
-                          <p>Bachelor of Science in Computer Science</p>
-                        </div>
-                        <div class="card-content">
-                          <p>major: <span>software engineering</span></p>
-                          <p>GPA: <span>3.13</span></p>
-                          <p>
-                            Relevant courses:
-                            <span
-                              >Data Structures & Algorithms, Web Development,
-                              Software Engineering, Database Systems</span
-                            >
-                          </p>
-                          <p>graduation project: <span>"..."</span></p>
-                          <p>type of graduation: <span>...</span></p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <div class="experience padd-15">
@@ -214,53 +203,258 @@
                       <!--  -->
                       <div class="card padd-15">
                         <div class="card-title">
-                          <i class="fa fa-calendar"></i> 2021-2026
-                          <h3>
-                            Vietnam - Korea University of Information and
-                            Communication Technology
-                          </h3>
-                          <p>Bachelor of Science in Computer Science</p>
+                          <h3>Internship at Fsoft Da Nang</h3>
+                          <p>Java Internship</p>
                         </div>
                         <div class="card-content">
-                          <p>major: <span>software engineering</span></p>
-                          <p>GPA: <span>3.13</span></p>
+                          <p>Time: <span>7/2024-9/2024</span></p>
+
                           <p>
-                            Relevant courses:
+                            Description:
                             <span
-                              >Data Structures & Algorithms, Web Development,
-                              Software Engineering, Database Systems</span
+                              >I have mastered the theory of Java and the MVC
+                              model, applying it to a small project using Spring
+                              MVC. Through the internship, I have improved my
+                              programming skills, self-learned in depth, and
+                              worked effectively in a team.</span
                             >
                           </p>
-                          <p>graduation project: <span>"..."</span></p>
-                          <p>type of graduation: <span>...</span></p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="certificate padd-15">
+                    <h3 class="title">Certificate</h3>
+                    <div class="row">
+                      <h3 style="color: aliceblue">No certificate yet</h3>
+                      <!-- Certificate item start-->
+                      <!-- <div class="certificate-item padd-15">
+                        <div class="certificate-item-inner shadow-dark">
+                          <div class="certificate-img">
+                            <img src="assets/image/my-project-1.png" alt="" />
+                          </div>
+                          <div class="certificate-content padd-15">
+                            <h4>TOEIC certificate</h4>
+                            <p>Language: <span>English</span></p>
+                            <p>Score: <span>320</span></p>
+                            <p>
+                              Description:
+                              <span
+                                >The assessment test evaluating the ability to
+                                use English in an international work
+                                environment.</span
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div> -->
+                      <!-- Certificate item End-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact">
+              <h3 class="contact-title">My social network</h3>
+              <div class="row">
+                <!-- ===== Contact info item Start =====-->
+                <div class="contact-info-item padd-15">
+                  <div class="icon"><i class="fa fa-phone"></i></div>
+                  <h4>Phone</h4>
+                  <p>...</p>
+                </div>
+                <!-- ===== Contact info item End =====-->
+                <!-- ===== Contact info item Start =====-->
+                <div class="contact-info-item padd-15">
+                  <div class="icon"><i class="fa fa-envelope"></i></div>
+                  <h4>Email</h4>
+                  <p>nguyen.vi.wainrp@gmail.com</p>
+                </div>
+                <!-- ===== Contact info item End =====-->
+
+                <!-- ===== Contact info item Start =====-->
+                <div class="contact-info-item padd-15">
+                  <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                  <h4>My social network</h4>
+                  <div class="social-network">
+                    <a
+                      href="https://www.facebook.com/vi.nguyen.717982"
+                      target="_blank"
+                      ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                    <a href="https://github.com/vihackeriue" target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a href="https://www.youtube.com/@wainrp" target="_blank"
+                      ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a href="https://soundcloud.com/wainrp" target="_blank"
+                      ><i class="fa-brands fa-soundcloud"></i
+                    ></a>
+                  </div>
+                </div>
+                <!-- ===== Contact info item End =====-->
               </div>
             </div>
           </div>
         </section>
         <!-- ===== About Section End =====-->
         <!-- ===== Service Section Start =====-->
-        <div class="service section">
+        <div class="service section" id="service">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
                 <h2>Service</h2>
               </div>
             </div>
+            <!-- Service item Start-->
+            <div class="row">
+              <!-- Service item Start-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-mobile-alt"></i>
+                  </div>
+                  <h4>Web Design</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia exercitationem doloribus expedita nobis atque voluptate
+                    totam! Consequatur repellat modi suscipit, totam, quis
+                    labore officia inventore molestias praesentium
+                    exercitationem, nulla voluptatem?
+                  </p>
+                </div>
+              </div>
+              <!-- Service item End-->
+              <!-- Service item Start-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-laptop-code"></i>
+                  </div>
+                  <h4>Web Design</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia exercitationem doloribus expedita nobis atque voluptate
+                    totam! Consequatur repellat modi suscipit, totam, quis
+                    labore officia inventore molestias praesentium
+                    exercitationem, nulla voluptatem?
+                  </p>
+                </div>
+              </div>
+              <!-- Service item End-->
+              <!-- Service item Start-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-mobile-alt"></i>
+                  </div>
+                  <h4>Web Design</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia exercitationem doloribus expedita nobis atque voluptate
+                    totam! Consequatur repellat modi suscipit, totam, quis
+                    labore officia inventore molestias praesentium
+                    exercitationem, nulla voluptatem?
+                  </p>
+                </div>
+              </div>
+              <!-- Service item End-->
+              <!-- Service item Start-->
+              <div class="service-item padd-15">
+                <div class="service-item-inner">
+                  <div class="icon">
+                    <i class="fa fa-mobile-alt"></i>
+                  </div>
+                  <h4>Web Design</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia exercitationem doloribus expedita nobis atque voluptate
+                    totam! Consequatur repellat modi suscipit, totam, quis
+                    labore officia inventore molestias praesentium
+                    exercitationem, nulla voluptatem?
+                  </p>
+                </div>
+              </div>
+              <!-- Service item End-->
+            </div>
           </div>
         </div>
 
         <!-- ===== Service Section End =====-->
+        <!-- ===== My Project Section Start =====-->
+        <section class="my-project section" id="my-project">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>My Project</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="my-project-heading padd-15">
+                <h2>My Project:</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- My Project item start-->
+              <div class="my-project-item padd-15">
+                <div class="my-project-item-inner shadow-dark">
+                  <div class="my-project-img">
+                    <img src="assets/image/my-project-1.png" alt="" />
+                  </div>
+                  <div class="my-project-content padd-15">
+                    <h4>
+                      Project to develop a RESTful API Web Service for a music
+                      application
+                    </h4>
+                    <p>Back-end: <span>Java</span></p>
+                    <p>Back-end: <span>MySQL</span></p>
+                    <p>Description:<span>...</span></p>
+                    <p>
+                      Detail:<span
+                        ><a
+                          href="https://github.com/vihackeriue/Server-API-Music-App.git"
+                          target="_blank"
+                        >
+                          RESTful API Web Service for a music application</a
+                        ></span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- My Project item End-->
+            </div>
+          </div>
+        </section>
+        <!-- ===== My Project Section End =====-->
+        <!-- ===== Contact Section Start =====-->
+        <section class="more section" id="more">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Function not yet available</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===== Contact Section End =====-->
       </div>
 
       <!-- ===== Main Content End=====-->
     </div>
     <!-- ===== Main Container End =====-->
-
+    <!-- ===== Style Switcher Start =====-->
+    <div class="style-switcher">
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <!-- ===== Style Switcher End =====-->
+    <script src="assets/js/style-switcher.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
